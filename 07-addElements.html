@@ -22,16 +22,18 @@
          * Ajouter chaque pizza en tant qu'élément de list dans "ul"
          */
 
+        // Boucle sur le tableau de pizzas
         // pizzas.forEach(pizza => {
         //     let li = document.createElement('li'); // Crée un élément <li>
-        //     li.textContent = pizza; // Définit le texte de la pizza
+        //     li.innerText = pizza; // Définit le texte de la pizza
         //     ul.appendChild(li); // Ajoute l'élément <li> à la liste <ul>
         // });
 
+        // Boucle avec "for"
         for (let i = 0; i < pizzas.length; i++) {
-            let li = document.createElement('li');
-            li.textContent = pizzas[i];
-            ul.appendChild(li);
+            let li = document.createElement('li'); // Crée un élément <li>
+            li.innerText = pizzas[i]; // Définit le texte de l'élément <li> avec la pizza correspondante
+            ul.appendChild(li); // Ajoute l'élément <li> à la liste <ul>
         }
     </script>
 </body>
