@@ -1,25 +1,39 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mon super titre</title>
 </head>
+
 <body>
+    <div id="yield">
+        <h1>Nos pizzas</h1>
+        <ul></ul>
+    </div>
 
-<div id="yield">
-    <h1>Nos pizzas</h1>
-    <ul></ul>
-</div>
+    <!-- À appeler dans une feuille js à part -->
+    <script type="text/javascript">
+        let pizzas = ["5 fromages", "Montagnarde", "Tartiflette", "Marguerita supplément fromage", "Reine mozza"];
+        let ul = document.querySelector('#yield, ul');  // Sélectionne l'élément <ul> à l'intérieur de la div
+        /*
+         * Faire une boucle sur les pizzas
+         * Ajouter chaque pizza en tant qu'élément de list dans "ul"
+         */
 
-<!-- À appeler dans une feuille js à part -->
-<script type="text/javascript">
-    let pizzas = ["5 fromages", "Montagnarde", "Tartiflette", "Marguerita supplément fromage", "Reine mozza"];
+        // pizzas.forEach(pizza => {
+        //     let li = document.createElement('li'); // Crée un élément <li>
+        //     li.textContent = pizza; // Définit le texte de la pizza
+        //     ul.appendChild(li); // Ajoute l'élément <li> à la liste <ul>
+        // });
 
-    /*
-     * Faire une boucle sur les pizzas
-     * Ajouter chaque pizza en tant qu'élément de list dans "ul"
-     */
-</script>
+        for (let i = 0; i < pizzas.length; i++) {
+            let li = document.createElement('li');
+            li.textContent = pizzas[i];
+            ul.appendChild(li);
+        }
+    </script>
 </body>
+
 </html>

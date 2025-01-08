@@ -9,7 +9,12 @@
 
 <body>
 
+    <style>
+        .selected{}
+    </style>
+
     <p id="coffee">
+
     </p>
 
     <!-- À appeler dans une feuille js à part -->
@@ -32,10 +37,10 @@
         span.classList.add('selected');
 
         // Ajouter le contenu : votre café préféré
-        span.textContent = 'Cappuccino';
+        span.innerText = 'Cappuccino';
 
         // Appliquer une couleur marron en modifiant directement le style
-        span.style.color = 'brown';
+        span.style.backgroundColor = 'lightblue';
 
         // Injecter le "span" dans l'élément "coffee"
         coffee.appendChild(span);
